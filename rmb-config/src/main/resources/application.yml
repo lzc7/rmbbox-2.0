@@ -6,6 +6,8 @@ spring:
       url: jdbc:mysql://123.59.64.175:3306/bbt_pt_testnew?zeroDateTimeBehavior=convertToNull
       username: root
       password: i2X4wwet3ipgNL3m
+  thymeleaf:
+        cache: false
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
 

@@ -1,0 +1,54 @@
+server:
+  port: 8081
+
+
+spring:
+  datasource:
+
+      type: com.alibaba.druid.pool.DruidDataSource
+
+      master:
+          driverClassName: com.mysql.jdbc.Driver
+          url: jdbc:mysql://123.59.64.175:3306/bbt_pt_testnew?zeroDateTimeBehavior=convertToNull
+          username: root
+          password: i2X4wwet3ipgNL3m
+          filters: stat
+          initialSize: 5
+          maxActive: 10
+          maxWait: 30000
+          maxPoolPreparedStatementPerConnectionSize: 50
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: select 1
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          poolPreparedStatements: false
+
+      cluster:
+          driverClassName: com.mysql.jdbc.Driver
+          url: jdbc:mysql://123.59.64.175:3306/bbt_rmb?zeroDateTimeBehavior=convertToNull
+          username: root
+          password: i2X4wwet3ipgNL3m
+          filters: stat
+          initialSize: 5
+          maxActive: 10
+          maxWait: 30000
+          maxPoolPreparedStatementPerConnectionSize: 50
+          timeBetweenEvictionRunsMillis: 60000
+          minEvictableIdleTimeMillis: 300000
+          validationQuery: select 1
+          testWhileIdle: true
+          testOnBorrow: false
+          testOnReturn: false
+          poolPreparedStatements: false
+  banner:
+    location: classpath:config/banner.txt
+
+mybatis:
+     mapperLocations: classpath:config/mapper/*/*.xml
+     configLocation: classpath:config/mybatis-bbt-config.xml
+     typeAliasesPackage: com.zipi.domain
+
+logging:
+  config: classpath:config/logback.xml

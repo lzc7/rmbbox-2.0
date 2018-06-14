@@ -6,11 +6,9 @@ import java.util.List;
 
 /**
  * @author liangyu
- * @date 2018/6/9
+ * @date 2018/6/14
  */
-public interface UserService {
-
-    long insert(User user) throws Exception;
+public interface OrderService {
 
     List<User> list();
 }

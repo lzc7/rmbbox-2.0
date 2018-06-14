@@ -1,6 +1,6 @@
 package com.zipi.service.user.Impl;
 
-import com.zipi.dao.UserMapper;
+import com.zipi.dao.master.UserMapper;
 import com.zipi.domain.user.User;
 import com.zipi.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +21,9 @@ public class UserServiceImpl implements UserService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public long insert(User user) {
+    public long insert(User user) throws Exception{
         long num = userMapper.insert(user);
-        System.out.println(num);
+        System.out.println(1/0);
         return num;
     }
 

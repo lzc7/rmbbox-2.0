@@ -6,3 +6,4 @@ target
 *.ipr
 mvnw
 *.cmd
+logs
